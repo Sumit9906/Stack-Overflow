@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react'
+import React, { useState} from 'react'
 import {  useNavigate,NavLink } from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux'
-import decode from 'jwt-decode'
+import { useDispatch } from 'react-redux'
+// import decode from 'jwt-decode'
 // import icon from '../../assets/icon.png'
 import Globe from '../../assets/Globe.svg'
 // import search from '../../assets/search-solid.svg'
@@ -14,7 +14,7 @@ const MNavbar = () => {
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    var User = useSelector((state) => (state.currentUserReducer))
+    // var User = useSelector((state) => (state.currentUserReducer))
 
     const [sidebarOpen, setSideOpen] = useState(false);
 //eslint-disable-next-line
@@ -23,17 +23,6 @@ const MNavbar = () => {
         navigate('/')
         dispatch(setCurrentUser(null))
     }
-
-    useEffect(() => {
-        const token = User?.token
-        if(token){
-            const decodedToken = decode(token)
-            if(decodedToken.exp * 1000 < new Date().getTime()){
-                handleLogout()
-            }
-        }
-        dispatch(setCurrentUser(JSON.parse(localStorage.getItem('Profile'))))
-    },[dispatch, User?.token, handleLogout])
 
     const toggleSidebar = () =>  {
         setSideOpen(!sidebarOpen);
