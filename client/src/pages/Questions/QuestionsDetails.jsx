@@ -76,7 +76,7 @@ const QuestionsDetails = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const location = useLocation()
-    const url = 'http://localhost:3000'
+    const url = 'https://stackoverflow-hv1q.onrender.com'
 
     const handlePostAns = (e, answerLength) => {
       e.preventDefault()
