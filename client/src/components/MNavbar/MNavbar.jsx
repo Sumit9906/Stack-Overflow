@@ -1,11 +1,11 @@
 import React, { useState} from 'react'
-import {  useNavigate,NavLink } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
+import {  Link, useNavigate,NavLink } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
 // import decode from 'jwt-decode'
-// import icon from '../../assets/icon.png'
+import icon from '../../assets/icon.png'
 import Globe from '../../assets/Globe.svg'
-// import search from '../../assets/search-solid.svg'
-// import Avatar from '../../components/Avatar/Avatar'
+import search from '../../assets/search-solid.svg'
+import Avatar from '../../components/Avatar/Avatar'
 import './MNavbar.css'
 import { setCurrentUser } from '../../actions/currentUser'
 import {FaBars} from 'react-icons/fa'
@@ -14,10 +14,10 @@ const MNavbar = () => {
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    // var User = useSelector((state) => (state.currentUserReducer))
+    var User = useSelector((state) => (state.currentUserReducer))
 
     const [sidebarOpen, setSideOpen] = useState(false);
-//eslint-disable-next-line
+    //eslint-disable-next-line
     const handleLogout = () => {
         dispatch({ type: 'LOGOUT' })
         navigate('/')
@@ -52,6 +52,32 @@ const MNavbar = () => {
                     </NavLink>
                 </div>
             </nav>
+        </div>
+        <div className="mainnav2">
+            <div className='navbarr'>
+                <div className="scale1">
+                    <Link to='/' className='logo'>
+                        <img src={icon} alt="logo" />
+                    </Link>
+                    <Link to='/' className='naitm nabtn'>Products</Link>
+                </div>
+                <div className="scale2">
+                    <img src={search} alt="search" className='search'/>
+                    { User === null ?
+                    <Link to='/Auth' className='nalink naitm'>Log in</Link> :
+                    <>
+                        <Link to={`/Users/${User.result._id}`} style= { {color: "white" , textDecoration: 'none' }} ><Avatar backgroundColor='#009dff' px='4px' py='2px' borderRadius="50%" color='white'>{User.result.name.charAt(0).toUpperCase()}</Avatar></Link>
+                        <button className='' onClick={handleLogout} >Log out</button>
+                    </>
+                }
+                {
+                    User === null ? 
+                    <Link to='/Auth' className='nalink naitm'>Sign Up</Link> : 
+                    <>
+                    </> 
+                }
+                </div>
+            </div>
         </div>
     </div>
   )

@@ -2,6 +2,9 @@
     .sidebarr{
         display: none;
     }
+    .mainnav{
+        display: none;
+    }
 }
 @media only screen and (max-width: 620px){
     body{
@@ -9,12 +12,28 @@
         overflow: hidden;
         font-size: 16px;
     }
+    .mainnav{
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+        background-color: white;
+        box-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+        padding: 3px;
+        border-top: solid 4px #ef8236;
+    }
+    .sidebarr{
+        display: block;
+        position: relative;
+        margin: 3px;
+    }
     .bars{
         display: flex;
-        line-height: 4.5;
+        /* line-height: 4.5; */
+        width: 20px;
         cursor: pointer;
         padding: 0%;
-        margin: 10px;
+        margin: 11px;
     }
     .navb{
         position: fixed;
@@ -34,6 +53,7 @@
     }
     .nav-link{
         text-decoration: none;
+        font-size: small;
         color: #3a3a3a;
         display: flex;
         align-items: center;
@@ -49,5 +69,68 @@
         color: black;
         background-color: rgb(225, 225, 225);
         border-right: solid 3px #ef8236;
+    }
+    .mainnav2{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        /* padding: 2px; */
+        margin-left: 3px;
+        margin-right: 0px;
+    }
+    .navbarr{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        padding: 0px;
+    }
+    .scale1{
+        display: flex;
+        width: 35%;
+        flex-direction: row;
+        padding: 0px;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .scale2{
+        display: flex;
+        width: 65%;
+        align-items: center;
+        flex-direction: row;
+        padding: 1px;
+        margin-left: 8px;
+        justify-content: space-evenly;
+    }
+    .logo{
+        margin-left: 2px;
+    }
+    .search{
+        width: 28px;
+    }
+    .nalink ,.naitm{
+        margin: 0 3px;
+        text-decoration: none;
+        font-size: small;
+        font-weight: 500;
+        transition: 0.2s;
+        color: rgb(69, 69, 69);
+    }
+    .nabtn{
+        cursor: pointer;
+        border-radius: 20px;
+        padding: 8px 20px;
+    }
+    .nabtn:hover{
+        background-color: rgb(226, 226, 226);
+    }
+    .nalink{
+        padding: 7px 10px;
+        border: solid 1px blue;
+        border-radius: 3px;
+        margin: 0px;
+        background-color: #e7f8fe;
+    }
+    .nalink:hover{
+        background-color: #d3e4eb;
     }
 }
