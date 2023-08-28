@@ -1,6 +1,7 @@
 import './App.css';
 import Routes1 from './Routes1';
 import Navbar from './components/Navbar/Navbar';
+import MNavbar from './components/MNavbar/MNavbar';
 import { BrowserRouter as Router} from 'react-router-dom'
 import { fetchAllQuestions } from './actions/question';
 import { useEffect } from 'react';
@@ -20,6 +21,7 @@ function App() {
     <div className="App">
       <Router>
         <Navbar/>
+        <MNavbar/>
         <Routes1/>
       </Router>
     </div>

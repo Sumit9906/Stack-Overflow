@@ -23,6 +23,7 @@ const Navbar = () => {
             }
         }
         dispatch(setCurrentUser(JSON.parse(localStorage.getItem('Profile'))))
+        //eslint-disable-next-line
     },[dispatch])
 
     const handleLogout = () => {

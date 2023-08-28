@@ -68,3 +68,8 @@
 .nav-links:hover{
     background-color: #d3e4eb;
 }
+@media only screen and (max-width: 600px) {
+    .main-nav{
+        display: none;
+    }
+}
