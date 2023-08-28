@@ -53,6 +53,7 @@ export const deleteQuestion = (id, navigate) => async (dispatch) => {
 
   export const voteQuestion = (id, value, userId) => async (dispatch) => {
     try {
+        // eslint-disable-next-line
         const {data} = await api.voteQuestion(id, value, userId)
         dispatch(fetchAllQuestions())
     } catch (error) {
