@@ -101,6 +101,7 @@
   .main-bar{
     width: 100%;
     margin: 5px;
+    height: 80vh;
     overflow-y: auto;
   }
   .main-bar-header{
