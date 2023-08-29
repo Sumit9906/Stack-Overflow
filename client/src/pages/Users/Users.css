@@ -20,3 +20,15 @@
     margin: 0px 10px;
 
 }
+@media only screen and (max-width: 620px) {
+    .userList-container{
+        display: flex;
+        flex-direction: column;
+        font-size: large;
+        gap: 0;
+    }
+    .user-profile-link{
+        padding: 0%;
+        margin: 0%;
+    }
+}

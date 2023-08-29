@@ -21,7 +21,7 @@ export default function App() {
   }, [dispatch])
 
   return (
-    <div id='container' className="App">
+    <div className="App">
       <Router>
         <Navbar/>
         <MNavbar/>

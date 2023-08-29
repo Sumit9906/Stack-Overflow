@@ -101,18 +101,25 @@
   .main-bar{
     width: 100%;
     margin: 5px;
-    height: 80vh;
-    overflow-y: auto;
+    /* height: 80vh !important; */
+    overflow-y: scroll;
   }
   .main-bar-header{
+    position: relative;
     font-size: small;
     margin: 3px 3px;
+    top: 18px;
+    height: 140px;
   }
   .noofques p{
     margin-top: 1px;
     padding: 0%;
     margin-left: 3px;
   }
+  /* .noofques{
+    height: 100vh;
+    overflow-y: scroll;
+  } */
   /* .ask-btn{
     font-size: small;
     width: 100px;

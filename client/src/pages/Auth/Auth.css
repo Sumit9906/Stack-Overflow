@@ -78,3 +78,18 @@
     font-size: 13px;
     cursor: pointer;
 }
+@media only screen and (max-width: 620px) {
+    .auth-section{
+        font-size: small;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 50px;
+    }
+    .auth-container-1{
+        padding-left: 35px;
+    }
+    .auth-container form{
+        width: fit-content;
+    }
+}
