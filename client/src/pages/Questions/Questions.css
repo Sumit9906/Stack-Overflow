@@ -129,3 +129,13 @@
       width: calc(100% - 24px);
     }
   }
+  @media only screen and (max-width: 620px){
+    .question-details-page{
+      margin-top: 0%;
+      padding-left: 10px;
+    }
+    .home-container-2{
+      max-height: 100vh;
+      overflow-y: auto;
+    }
+  }

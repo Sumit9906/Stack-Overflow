@@ -1,26 +1,3 @@
-@media  screen and (max-width: 600px) {
-  .main-bar{
-    position: absolute;
-    max-width: 100%;
-    padding: 10px 10px;
-    margin: 10px 10px;
-    /* float: none; */
-    width: 100%;
-  }
-  .main-bar-header{
-    display: flex;
-    height: 120px;
-    width: 100%;
-    font-size: 13px;
-    justify-content: space-around;
-  }
-  .main-bar-header  h1, .ask-btn{
-    margin: 5px;
-  } 
-  .noofques p{
-    margin-left: 5px;
-  }
-}
 .main-bar {
   width: calc(100% - 300px - 24px);
   float: left;
@@ -119,4 +96,24 @@
   .display-question-container .display-votes-ans {
     padding: 10px;
   }
+}
+@media only screen and (max-width:620px){
+  .main-bar{
+    width: 100%;
+    margin: 5px;
+  }
+  .main-bar-header{
+    font-size: small;
+    margin: 3px 3px;
+  }
+  .noofques p{
+    margin-top: 1px;
+    padding: 0%;
+    margin-left: 3px;
+  }
+  /* .ask-btn{
+    font-size: small;
+    width: 100px;
+    padding: 10px 3px !important;
+  } */
 }

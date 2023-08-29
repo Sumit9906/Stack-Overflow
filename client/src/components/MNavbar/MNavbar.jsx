@@ -66,8 +66,8 @@ const MNavbar = () => {
                     { User === null ?
                     <Link to='/Auth' className='nalink naitm'>Log in</Link> :
                     <>
-                        <Link to={`/Users/${User.result._id}`} style= { {color: "white" , textDecoration: 'none' }} ><Avatar backgroundColor='#009dff' px='4px' py='2px' borderRadius="50%" color='white'>{User.result.name.charAt(0).toUpperCase()}</Avatar></Link>
-                        <button className='' onClick={handleLogout} >Log out</button>
+                        <Link to={`/Users/${User.result._id}`} style= { {color: "white" , textDecoration: 'none' }} ><Avatar backgroundColor='#009dff' px='15px' py='9px' borderRadius="50%" color='white'>{User.result.name.charAt(0).toUpperCase()}</Avatar></Link>
+                        <button className='nalink naitm' onClick={handleLogout} >Log out</button>
                     </>
                 }
                 {

@@ -4,11 +4,14 @@ import Navbar from './components/Navbar/Navbar';
 import MNavbar from './components/MNavbar/MNavbar';
 import { BrowserRouter as Router} from 'react-router-dom'
 import { fetchAllQuestions } from './actions/question';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchAllUsers } from './actions/users'
 
-function App() {
+// import { animateScroll } from 'react-scroll'
+
+export default function App() {
+
 
   const dispatch = useDispatch()
 
@@ -18,7 +21,7 @@ function App() {
   }, [dispatch])
 
   return (
-    <div className="App">
+    <div id='container' className="App">
       <Router>
         <Navbar/>
         <MNavbar/>
@@ -27,5 +30,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
